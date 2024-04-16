@@ -5,18 +5,16 @@ import android.text.TextUtils;
 import android.util.Base64;
 import com.github.catvod.crawler.Spider;
 import com.github.catvod.crawler.SpiderDebug;
-import com.github.catvod.spider.merge.CC;
-import com.github.catvod.spider.merge.Fp;
-import com.github.catvod.spider.merge.O4;
-import com.github.catvod.spider.merge.RT;
-import com.github.catvod.spider.merge.V2;
-import com.github.catvod.spider.merge.Zj;
-import com.github.catvod.spider.merge.lm;
-import com.github.catvod.spider.merge.ma;
-import com.github.catvod.spider.merge.rl.SN;
-import com.github.catvod.spider.merge.rl.yq;
-import com.github.catvod.spider.merge.sx;
-import com.github.catvod.spider.merge.w2;
+import com.github.catvod.spider.merge.Ah;
+import com.github.catvod.spider.merge.F5;
+import com.github.catvod.spider.merge.ZV;
+import com.github.catvod.spider.merge.Zz;
+import com.github.catvod.spider.merge.a9;
+import com.github.catvod.spider.merge.du;
+import com.github.catvod.spider.merge.eV;
+import com.github.catvod.spider.merge.mu;
+import com.github.catvod.spider.merge.qk;
+import com.github.catvod.spider.merge.wV;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.URLDecoder;
@@ -32,7 +30,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import okhttp3.Call;
 import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -79,13 +76,13 @@ public class XBPQ extends Spider {
         String str5 = str4;
         while (i < split.length) {
             String yq;
-            StringBuilder yq2 = Zj.yq(str4);
+            StringBuilder yq2 = eV.yq(str4);
             int i2 = i + 1;
             yq2.append(i2);
             String stringBuilder = yq2.toString();
             String str6 = split[i];
             if (str6.equals("空")) {
-                yq = CC.yq(str5, "0||");
+                yq = Ah.yq(str5, "0||");
             } else {
                 String str7 = "--";
                 if (str6.contains(str7)) {
@@ -100,7 +97,7 @@ public class XBPQ extends Spider {
                 stringBuilder2.append(str5);
                 stringBuilder2.append(stringBuilder);
                 stringBuilder2.append(str7);
-                yq = lm.yq(stringBuilder2, n(str6, yq), str3);
+                yq = F5.yq(stringBuilder2, n(str6, yq), str3);
             }
             str5 = yq;
             i = i2;
@@ -112,7 +109,7 @@ public class XBPQ extends Spider {
     }
 
     private String B(int i, String str, String str2) {
-        StringBuilder yq = Zj.yq("#");
+        StringBuilder yq = eV.yq("#");
         yq.append(this.tF);
         String stringBuilder = yq.toString();
         StringBuilder stringBuilder2 = new StringBuilder();
@@ -152,7 +149,7 @@ public class XBPQ extends Spider {
         if (str.equals(str5)) {
             for (String str42 : str2.split(str42)) {
                 String str7 = str42.split(str3)[0];
-                StringBuilder yq2 = Zj.yq("");
+                StringBuilder yq2 = eV.yq("");
                 yq2.append(i + 1);
                 if (str7.equals(yq2.toString())) {
                     return str42;
@@ -182,7 +179,7 @@ public class XBPQ extends Spider {
                     String O = O(split[i]);
                     String str6 = ">>>";
                     if (O.contains(str6)) {
-                        yq = lm.yq(new StringBuilder(), O.split(str6)[0], ">");
+                        yq = F5.yq(new StringBuilder(), O.split(str6)[0], ">");
                         O = O.split(str6)[1];
                     } else {
                         str6 = ">>";
@@ -497,18 +494,18 @@ public class XBPQ extends Spider {
                                     str32 = str13;
                                     break;
                                 }
-                                str28 = ((ma) linkedList.get(i6)).N(str20).yq().trim();
+                                str28 = ((mu) linkedList.get(i6)).N(str20).yq().trim();
                                 String str39 = str20;
-                                str20 = ((ma) linkedList.get(i6)).N(str34).yq().trim();
+                                str20 = ((mu) linkedList.get(i6)).N(str34).yq().trim();
                                 str37 = str34;
-                                str34 = ((ma) linkedList.get(i6)).N(str21).yq().trim();
-                                str27 = ((ma) linkedList.get(i6)).N(str32).yq().trim();
+                                str34 = ((mu) linkedList.get(i6)).N(str21).yq().trim();
+                                str27 = ((mu) linkedList.get(i6)).N(str32).yq().trim();
                                 if (str20 != null) {
                                     str16 = str21;
                                     str38 = str32;
                                     if (str20.length() >= 1) {
                                         StringBuilder stringBuilder2;
-                                        str21 = w2.i(str30, str34);
+                                        str21 = Zz.tF(str30, str34);
                                         if (this.Gc) {
                                             str21 = Gc(str21, str30);
                                         }
@@ -2241,7 +2238,7 @@ public class XBPQ extends Spider {
                                     Zm = arrayList2;
                                 }
                                 try {
-                                    str20 = w2.i(str27, str20);
+                                    str20 = Zz.tF(str27, str20);
                                     if (this.Gc) {
                                         try {
                                             str20 = Gc(str20, str27);
@@ -3552,7 +3549,7 @@ public class XBPQ extends Spider {
             jSONObject.put("list", obj2);
             return jSONObject;
         } else {
-            str3 = lm.yq(Zj.yq(str34), this.tF, str34);
+            str3 = F5.yq(eV.yq(str34), this.tF, str34);
             StringBuilder stringBuilder10 = new StringBuilder();
             str4 = str28;
             stringBuilder10.append(".*#(.*?)\\$");
@@ -3657,16 +3654,16 @@ public class XBPQ extends Spider {
         }
     }
 
-    protected final V2 U(String str) {
+    protected final a9 U(String str) {
         String str2 = "xp";
         if (str.contains(";post")) {
-            str = t0(CC.yq(str2, str));
+            str = t0(Ah.yq(str2, str));
         } else {
-            StringBuilder yq = Zj.yq(str2);
+            StringBuilder yq = eV.yq(str2);
             yq.append(str.split(";")[0]);
             str = i(yq.toString());
         }
-        return V2.yq(str);
+        return a9.yq(str);
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:52:0x0205  */
@@ -3724,7 +3721,7 @@ public class XBPQ extends Spider {
                         }
                         this.t0 = str2;
                         hashMap = new HashMap();
-                        sx.Gc(sx.yq(), str2, null, q(str2), hashMap);
+                        wV.t0(wV.yq(), str2, null, q(str2), hashMap);
                         for (Entry entry : hashMap.entrySet()) {
                             if (!((String) entry.getKey()).equals("set-cookie")) {
                                 if (((String) entry.getKey()).equals("Set-Cookie")) {
@@ -3778,7 +3775,7 @@ public class XBPQ extends Spider {
                         push.init(context, ee("阿里token"));
                         return;
                     }
-                    jSONObject = new JSONObject(sx.zH(str2, null));
+                    jSONObject = new JSONObject(wV.zH(str2, null));
                 } else if (str2.startsWith("{")) {
                     jSONObject = new JSONObject(str2);
                 } else {
@@ -3826,7 +3823,7 @@ public class XBPQ extends Spider {
                     }
                     this.t0 = str2;
                     hashMap = new HashMap();
-                    sx.Gc(sx.yq(), str2, null, q(str2), hashMap);
+                    wV.t0(wV.yq(), str2, null, q(str2), hashMap);
                     for (Entry entry2 : hashMap.entrySet()) {
                     }
                     str2 = "";
@@ -3861,7 +3858,7 @@ public class XBPQ extends Spider {
             }
             this.t0 = str2;
             hashMap = new HashMap();
-            sx.Gc(sx.yq(), str2, null, q(str2), hashMap);
+            wV.t0(wV.yq(), str2, null, q(str2), hashMap);
             for (Entry entry22 : hashMap.entrySet()) {
             }
             str2 = "";
@@ -3901,10 +3898,10 @@ public class XBPQ extends Spider {
         String str5 = str4;
         while (i < split.length) {
             String str6 = i < split.length + -1 ? "#" : str4;
-            StringBuilder yq = Zj.yq(str5);
+            StringBuilder yq = eV.yq(str5);
             yq.append(split[i]);
             yq.append("$");
-            str5 = lm.yq(yq, split2[i], str6);
+            str5 = F5.yq(yq, split2[i], str6);
             i++;
         }
         return str5;
@@ -4195,7 +4192,7 @@ public class XBPQ extends Spider {
                 if (!split[i].isEmpty()) {
                     String trim = ((String) Dr(str, split[i], str3).get(0)).trim();
                     if (!trim.isEmpty()) {
-                        str4 = CC.yq(str4, trim);
+                        str4 = Ah.yq(str4, trim);
                     }
                 }
             }
@@ -4300,7 +4297,7 @@ public class XBPQ extends Spider {
             for (String str5 : str3.split("#")) {
                 String str6 = "\\$";
                 Object obj = str5.split(str6)[0];
-                StringBuilder yq = Zj.yq(" ");
+                StringBuilder yq = eV.yq(" ");
                 yq.append(str5.split(str6)[1]);
                 hashMap.put(obj, yq.toString());
             }
@@ -4317,7 +4314,7 @@ public class XBPQ extends Spider {
         for (String dT : split) {
             String dT2 = dT(str, dT2);
             if (dT2.length() > 0) {
-                str3 = CC.yq(str3, dT2);
+                str3 = Ah.yq(str3, dT2);
             }
         }
         return str3;
@@ -4712,7 +4709,7 @@ public class XBPQ extends Spider {
                     return str;
                 }
             }
-            V2 U = U(this.t0);
+            a9 U = U(this.t0);
             if (ee.length() < 1 && ee(str8).startsWith(str13)) {
                 ee = ee(str8);
             }
@@ -4738,10 +4735,10 @@ public class XBPQ extends Spider {
                 CharSequence charSequence2;
                 CharSequence str162;
                 CharSequence str152;
-                ee = ((ma) linkedList.get(i)).N(xa(str12, "cateName", "//text()")).yq().replaceAll(str, str5);
+                ee = ((mu) linkedList.get(i)).N(xa(str12, "cateName", "//text()")).yq().replaceAll(str, str5);
                 if (ee.length() <= 9 && ee.length() >= 2) {
                     if (!str4.contains(ee)) {
-                        str6 = ((ma) linkedList.get(i)).N(Gd(str11, "分类链接", "cateId", "//@href")).yq().replaceAll(str, str5);
+                        str6 = ((mu) linkedList.get(i)).N(Gd(str11, "分类链接", "cateId", "//@href")).yq().replaceAll(str, str5);
                         if (!str6.contains("search")) {
                             if (str6.startsWith(str7)) {
                                 str6 = str6.replace(this.t0, str5);
@@ -4886,36 +4883,36 @@ public class XBPQ extends Spider {
                 for (parseInt = 
 /*
 Method generation error in method: com.github.catvod.spider.XBPQ.N(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String):org.json.JSONArray, dex: 
-jadx.core.d.b.a: Error generate insn: PHI: (r7_15 'parseInt' int) = (r7_13 'parseInt' int), (r7_14 'parseInt' int) binds: {(r7_13 'parseInt' int)=B:16:0x0060, (r7_14 'parseInt' int)=B:17:0x0062} in method: com.github.catvod.spider.XBPQ.N(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String):org.json.JSONArray, dex: 
-	at jadx.core.a.f.a(InsnGen.java:228)
-	at jadx.core.a.i.a(RegionGen.java:183)
-	at jadx.core.a.i.a(RegionGen.java:61)
-	at jadx.core.a.i.a(RegionGen.java:87)
-	at jadx.core.a.i.a(RegionGen.java:53)
-	at jadx.core.a.i.b(RegionGen.java:93)
-	at jadx.core.a.i.a(RegionGen.java:118)
-	at jadx.core.a.i.a(RegionGen.java:57)
-	at jadx.core.a.i.a(RegionGen.java:87)
-	at jadx.core.a.i.a(RegionGen.java:53)
-	at jadx.core.a.i.b(RegionGen.java:93)
-	at jadx.core.a.i.a(RegionGen.java:278)
-	at jadx.core.a.i.a(RegionGen.java:63)
-	at jadx.core.a.i.a(RegionGen.java:87)
-	at jadx.core.a.i.a(RegionGen.java:53)
-	at jadx.core.a.g.b(MethodGen.java:171)
-	at jadx.core.a.b.a(ClassGen.java:325)
-	at jadx.core.a.b.d(ClassGen.java:263)
-	at jadx.core.a.b.c(ClassGen.java:225)
-	at jadx.core.a.b.a(ClassGen.java:115)
-	at jadx.core.a.b.b(ClassGen.java:75)
-	at jadx.core.a.c.a(CodeGen.java:10)
-	at jadx.core.b.a(ProcessClass.java:38)
-	at jadx.a.d.a(JadxDecompiler.java:300)
-	at jadx.a.e.b(JavaClass.java:63)
-Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
-	at jadx.core.a.f.a(InsnGen.java:528)
-	at jadx.core.a.f.a(InsnGen.java:500)
-	at jadx.core.a.f.a(InsnGen.java:222)
+jadx.core.utils.exceptions.CodegenException: Error generate insn: PHI: (r7_15 'parseInt' int) = (r7_13 'parseInt' int), (r7_14 'parseInt' int) binds: {(r7_13 'parseInt' int)=B:16:0x0060, (r7_14 'parseInt' int)=B:17:0x0062} in method: com.github.catvod.spider.XBPQ.N(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String):org.json.JSONArray, dex: 
+	at jadx.core.codegen.InsnGen.makeInsn(Unknown Source:86)
+	at jadx.core.codegen.RegionGen.makeLoop(Unknown Source:137)
+	at jadx.core.codegen.RegionGen.makeRegion(Unknown Source:54)
+	at jadx.core.codegen.RegionGen.makeSimpleRegion(Unknown Source:24)
+	at jadx.core.codegen.RegionGen.makeRegion(Unknown Source:20)
+	at jadx.core.codegen.RegionGen.makeRegionIndent(Unknown Source:3)
+	at jadx.core.codegen.RegionGen.makeIf(Unknown Source:43)
+	at jadx.core.codegen.RegionGen.makeRegion(Unknown Source:34)
+	at jadx.core.codegen.RegionGen.makeSimpleRegion(Unknown Source:24)
+	at jadx.core.codegen.RegionGen.makeRegion(Unknown Source:20)
+	at jadx.core.codegen.RegionGen.makeRegionIndent(Unknown Source:3)
+	at jadx.core.codegen.RegionGen.makeTryCatch(Unknown Source:9)
+	at jadx.core.codegen.RegionGen.makeRegion(Unknown Source:64)
+	at jadx.core.codegen.RegionGen.makeSimpleRegion(Unknown Source:24)
+	at jadx.core.codegen.RegionGen.makeRegion(Unknown Source:20)
+	at jadx.core.codegen.MethodGen.addInstructions(Unknown Source:40)
+	at jadx.core.codegen.ClassGen.addMethod(Unknown Source:103)
+	at jadx.core.codegen.ClassGen.addMethods(Unknown Source:51)
+	at jadx.core.codegen.ClassGen.addClassBody(Unknown Source:22)
+	at jadx.core.codegen.ClassGen.addClassCode(Unknown Source:24)
+	at jadx.core.codegen.ClassGen.makeClass(Unknown Source:5)
+	at jadx.core.codegen.CodeGen.visit(Unknown Source:13)
+	at jadx.core.ProcessClass.process(Unknown Source:71)
+	at jadx.api.JadxDecompiler.processClass(Unknown Source:4)
+	at jadx.api.JavaClass.decompile(Unknown Source:19)
+Caused by: jadx.core.utils.exceptions.CodegenException: PHI can be used only in fallback mode
+	at jadx.core.codegen.InsnGen.fallbackOnlyInsn(Unknown Source:28)
+	at jadx.core.codegen.InsnGen.makeInsnBody(Unknown Source:61)
+	at jadx.core.codegen.InsnGen.makeInsn(Unknown Source:48)
 	... 24 more
 
 */
@@ -5095,17 +5092,10 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                 hashMap.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36");
                 Gd.put("referer", str);
             }
-            AnonymousClass3 anonymousClass3 = new yq() {
-                protected final void onFailure(Call call, Exception exception) {
-                }
-
-                protected final /* bridge */ /* synthetic */ void onResponse(Object obj) {
-                    Response response = (Response) obj;
-                }
-            };
-            sx.SN(sx.yq(), str2, Gd, anonymousClass3);
-            if (((Response) anonymousClass3.getResult()).code() == 200) {
-                String str3 = ((Response) anonymousClass3.getResult()).headers().get("Content-Type");
+            3 3 = new 3();
+            wV.SN(wV.yq(), str2, Gd, 3);
+            if (((Response) 3.getResult()).code() == 200) {
+                String str3 = ((Response) 3.getResult()).headers().get("Content-Type");
                 if (str3 == null) {
                     str3 = "application/octet-stream";
                 }
@@ -5114,7 +5104,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                 objArr[1] = str3;
                 System.out.println(str2);
                 System.out.println(str3);
-                objArr[2] = ((Response) anonymousClass3.getResult()).body().byteStream();
+                objArr[2] = ((Response) 3.getResult()).body().byteStream();
                 return objArr;
             }
         } catch (Throwable th) {
@@ -5133,14 +5123,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
     }
 
     private String tF(String str) {
-        AnonymousClass1 anonymousClass1 = new yq() {
-            protected final void onFailure(Call call, Exception exception) {
-            }
-
-            protected final /* bridge */ /* synthetic */ void onResponse(Object obj) {
-                Response response = (Response) obj;
-            }
-        };
+        1 1 = new 1();
         if (str.contains(";post")) {
             String trim = str.split(";post;")[1].trim();
             str = str.split(";")[0];
@@ -5150,15 +5133,15 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                 linkedHashMap.put(str2.substring(0, indexOf), str2.substring(indexOf + 1));
             }
             if (trim.isEmpty()) {
-                sx.N(sx.yq(), str, null, q(str), anonymousClass1);
+                wV.N(wV.yq(), str, null, q(str), 1);
             } else {
-                sx.N(sx.yq(), str, linkedHashMap, q(str), anonymousClass1);
+                wV.N(wV.yq(), str, linkedHashMap, q(str), 1);
             }
         } else {
-            sx.SN(sx.yq(), str, q(str), anonymousClass1);
+            wV.SN(wV.yq(), str, q(str), 1);
         }
         try {
-            return new String(((Response) anonymousClass1.getResult()).body().bytes(), xa);
+            return new String(((Response) 1.getResult()).body().bytes(), xa);
         } catch (IOException unused) {
             return "";
         }
@@ -10509,7 +10492,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         if (str4.startsWith(str2)) {
                             str4 = str4.startsWith(str) ? str4.replace(str, str3) : str4.replace(str2, str3);
                         }
-                        str = sx.zH(str4, null);
+                        str = wV.zH(str4, null);
                         if (str != null) {
                             optJSONObject = new JSONObject(str);
                         }
@@ -10531,7 +10514,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
             str3 = stringBuilder.toString();
             if (str4.startsWith(str2)) {
             }
-            str = sx.zH(str4, null);
+            str = wV.zH(str4, null);
             if (str != null) {
             }
             if (optJSONObject != null) {
@@ -10625,7 +10608,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
         String str2 = "";
         String tF = xa.length() > 0 ? tF(str) : str2;
         if (tF.length() < 1) {
-            tF = sx.zH(str, q(str));
+            tF = wV.zH(str, q(str));
         }
         str = b(tF);
         if (startsWith) {
@@ -10695,10 +10678,10 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                     String str11 = "parse";
                     if (Gd("免嗅", "mac", "Anal_MacPlayer", "0").equals(str7) && !obj.startsWith(str8)) {
                         String string;
-                        O4 OB = Fp.yq(sx.zH(obj, q(obj))).OB("script");
+                        du OB = qk.v(wV.zH(obj, q(obj))).OB("script");
                         int i = 0;
                         while (i < OB.size()) {
-                            String trim = ((RT) OB.get(i)).Hj().trim();
+                            String trim = ((ZV) OB.get(i)).Hj().trim();
                             if (trim.startsWith("var player_")) {
                                 JSONObject jSONObject2 = new JSONObject(trim.substring(trim.indexOf(123), trim.lastIndexOf(125) + 1));
                                 string = jSONObject2.getString(str9);
@@ -10713,7 +10696,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                                 }
                                 if (!isVideoFormat(string)) {
                                     jSONObject.put(str11, 0);
-                                } else if (w2.G4(string)) {
+                                } else if (Zz.B(string)) {
                                     jSONObject.put(str11, 1);
                                     jSONObject.put(str10, str7);
                                 } else {
@@ -10728,7 +10711,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         if (!isVideoFormat(string)) {
                         }
                         obj = string;
-                    } else if (ee("强制解析").equals(str7) || w2.G4(obj)) {
+                    } else if (ee("强制解析").equals(str7) || Zz.B(obj)) {
                         jSONObject.put(str11, 1);
                         jSONObject.put(str10, str7);
                     }
@@ -12608,7 +12591,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                                                                 str2 = str6;
                                                                 str6 = str35;
                                                                 try {
-                                                                    OW = w2.i(str6, OW);
+                                                                    OW = Zz.tF(str6, OW);
                                                                     str33 = str29;
                                                                     try {
                                                                         if (this.Gc) {
@@ -13748,7 +13731,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                                                     JSONObject jSONObject3;
                                                     StringBuilder stringBuilder8;
                                                     str23 = str8;
-                                                    str30 = w2.i(i2, jSONObject2.optString(xa("jspic", "jsonpic", "pic")).trim());
+                                                    str30 = Zz.tF(i2, jSONObject2.optString(xa("jspic", "jsonpic", "pic")).trim());
                                                     if (this.Gc) {
                                                         str30 = Gc(str30, i2);
                                                     }
@@ -14013,19 +13996,12 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
         if (tF.length() < 1) {
             tF = str.split(";post;")[1].trim();
             str = str.split(";")[0];
-            AnonymousClass2 anonymousClass2 = new SN() {
-                protected final void onFailure(Call call, Exception exception) {
-                }
-
-                protected final /* bridge */ /* synthetic */ void onResponse(Object obj) {
-                    String str = (String) obj;
-                }
-            };
+            2 2 = new 2();
             if (tF.isEmpty()) {
-                sx.N(sx.yq(), str, null, q(str), anonymousClass2);
+                wV.N(wV.yq(), str, null, q(str), 2);
             } else if (tF.startsWith("{") && tF.endsWith("}")) {
                 try {
-                    sx.tF(sx.yq(), str, new JSONObject(tF).toString(), q(str), anonymousClass2);
+                    wV.tF(wV.yq(), str, new JSONObject(tF).toString(), q(str), 2);
                 } catch (JSONException unused) {
                 }
             } else {
@@ -14034,9 +14010,9 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                     int indexOf = str3.indexOf("=");
                     linkedHashMap.put(str3.substring(0, indexOf), str3.substring(indexOf + 1));
                 }
-                sx.N(sx.yq(), str, linkedHashMap, q(str), anonymousClass2);
+                wV.N(wV.yq(), str, linkedHashMap, q(str), 2);
             }
-            tF = (String) anonymousClass2.getResult();
+            tF = (String) 2.getResult();
         }
         str = b(tF);
         if (startsWith) {
@@ -14048,7 +14024,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
     }
 
     final String un(String str) {
-        return Fp.yq(str).Fo();
+        return qk.v(str).s0();
     }
 
     /* JADX WARNING: Removed duplicated region for block: B:77:0x0275  */
@@ -14141,7 +14117,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
         String str8 = "";
         try {
             String stringBuilder;
-            V2 U;
+            a9 U;
             String xa;
             Object obj2;
             String xa2;
@@ -14149,7 +14125,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
             String xa4;
             String str9;
             String str10;
-            ma N;
+            mu N;
             String[] split = ((String) list3.get(0)).split("\\$\\$\\$");
             String str11 = "magnet";
             if (!split[2].startsWith(str7)) {
@@ -14214,7 +14190,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                                 xa4 = "/text()";
                                 if (i < linkedList.size()) {
                                 }
-                                arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                                arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                                 i++;
                             }
                             arrayList2 = new ArrayList();
@@ -14281,7 +14257,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                             xa4 = "/text()";
                             if (i < linkedList.size()) {
                             }
-                            arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                            arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                             i++;
                         }
                         arrayList2 = new ArrayList();
@@ -14340,7 +14316,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         if (i < linkedList.size()) {
                             break;
                         }
-                        arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                        arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                         i++;
                     }
                     arrayList2 = new ArrayList();
@@ -14356,7 +14332,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         if (i2 < linkedList2.size()) {
                             break;
                         }
-                        List SN3 = ((ma) linkedList2.get(i2)).SN(str6);
+                        List SN3 = ((mu) linkedList2.get(i2)).SN(str6);
                         ArrayList arrayList3 = new ArrayList();
                         int i3 = 0;
                         while (true) {
@@ -14370,8 +14346,8 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                             }
                             int size2 = xbpq.ee ? (linkedList3.size() - 1) - i3 : i3;
                             list2 = SN2;
-                            str5 = ((ma) linkedList3.get(size2)).N(str7).yq().trim();
-                            String trim8 = ((ma) linkedList3.get(size2)).N(xa4).yq().trim();
+                            str5 = ((mu) linkedList3.get(size2)).N(str7).yq().trim();
+                            String trim8 = ((mu) linkedList3.get(size2)).N(xa4).yq().trim();
                             if (trim8 != null) {
                                 String str12 = str5;
                                 if (trim8.length() >= 1) {
@@ -14530,7 +14506,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         xa4 = "/text()";
                         if (i < linkedList.size()) {
                         }
-                        arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                        arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                         i++;
                     }
                     arrayList2 = new ArrayList();
@@ -14597,7 +14573,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         xa4 = "/text()";
                         if (i < linkedList.size()) {
                         }
-                        arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                        arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                         i++;
                     }
                     arrayList2 = new ArrayList();
@@ -14665,7 +14641,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                         xa4 = "/text()";
                         if (i < linkedList.size()) {
                         }
-                        arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                        arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                         i++;
                     }
                     arrayList2 = new ArrayList();
@@ -14733,7 +14709,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                     xa4 = "/text()";
                     if (i < linkedList.size()) {
                     }
-                    arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                    arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                     i++;
                 }
                 arrayList2 = new ArrayList();
@@ -14791,7 +14767,7 @@ Caused by: jadx.core.d.b.a: PHI can be used only in fallback mode
                 xa4 = "/text()";
                 if (i < linkedList.size()) {
                 }
-                arrayList.add(((ma) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
+                arrayList.add(((mu) linkedList.get(i)).N(xbpq.xa("线路标题", "dtFromName", xa4)).yq().trim());
                 i++;
             }
             arrayList2 = new ArrayList();
